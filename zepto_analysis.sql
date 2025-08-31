@@ -4,7 +4,6 @@ drop table if exists zepto;
 use Zepto_project
   
 create table zepto (
-id SERIAL PRIMARY KEY,
 category VARCHAR(120),
 name VARCHAR(150) NOT NULL,
 mrp NUMERIC(8,2),
@@ -49,6 +48,9 @@ quantity IS NULL;
 SELECT DISTINCT category
 FROM zepto
 ORDER BY category;
+
+--adding new column id
+ALTER TABLE zepto1 ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST ; 
 
 --products in stock vs out of stock
 SELECT outOfStock, COUNT(id)
