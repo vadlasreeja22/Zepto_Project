@@ -117,7 +117,7 @@ LIMIT 5;
 
 -- Q6. Price per gram for products >= 100g
 SELECT name, weightInGms, discountedSellingPrice,
-       ROUND(discountedSellingPrice / weightInGms, 2) AS price_per_gram
+       ROUND(discountedSellingPrice / weightInGms  AS price_per_gram
 FROM zepto
 WHERE weightInGms >= 100
 ORDER BY price_per_gram;
